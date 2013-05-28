@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@import "common/reponsive-video";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/**
+ *
+ *
+	Base Type
+ *
+ */
+html {
+	font: normal 112.5%/1.65 'Open Sans', sans-serif;
+}
+
+body {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+	color: #444444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+	margin-top: 0;
+}
+
+.tera {
+	font-size: 117px;
+	font-size: 6.5rem;
+	margin-bottom: 0.25385rem;
+}
+
+.giga {
+	font-size: 90px;
+	font-size: 5rem;
+	margin-bottom: 0.33rem;
+}
+
+.mega {
+	font-size: 72px;
+	font-size: 4rem;
+	margin-bottom: 0.4125rem;
+}
+
+h1,
+.alpha {
+	font-size: 60px;
+	font-size: 3.33333rem;
+	margin-bottom: 0.495rem;
+}
+
+h2,
+.beta {
+	font-size: 48px;
+	font-size: 2.66667rem;
+	margin-bottom: 0.61875rem;
+}
+
+h3,
+.gamma {
+	font-size: 36px;
+	font-size: 2rem;
+	margin-bottom: 0.825rem;
+}
+
+h4,
+.delta {
+	font-size: 24px;
+	font-size: 1.33333rem;
+	margin-bottom: 1.2375rem;
+}
+
+h5,
+.epsilon {
+	font-size: 21px;
+	font-size: 1.16667rem;
+	margin-bottom: 1.41429rem;
+}
+
+h6,
+.zeta {
+	font-size: 18px;
+	font-size: 1rem;
+	margin-bottom: 1.65rem;
+}
+
+/**
+ *
+	Hyphens
+ *
+ */
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+	/* Accepted values: [ none | manual | auto ] */
+	-webkit-hyphens: none; /* Safari 5.1 thru 6, iOS 4.2 thru 6 */
+	-moz-hyphens: none; /* Firefox 16 thru 20 */
+	-ms-hyphens: none; /* IE10 */
+	-o-hyphens: none;	 /* PRESTO...haha LOL */
+	hyphens: none;	 /* W3C standard */
+}
+
+/**
+ *
+	Paragraphs
+ *
+ */
+
+p {
+	margin: 0 0 1.5em;
+}
+
+p + p {
+	text-indent: 1.5em;
+	margin-top: -1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #222222;
+}
+
+.drop-cap:first-letter {
+	float: left;
+	margin: 0;
+	padding: 0.125em 0.125em 0 0;
+	font-size: 6em;
+	font-family: Copperplate;
+	line-height: 0.5;
+	text-indent: 0;
+	background: transparent;
+	color: inherit;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.lining dt,
+.lining dd {
+	display: inline;
+	margin: 0;
+}
+.lining dt + dt:before,
+.lining dd + dt:before {
+	content: "\A";
+	white-space: pre;
+}
+.lining dd + dd:before {
+	content: ", ";
+}
+.lining dd:before {
+	content: ": ";
+	margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.dictionary-style dt {
+	display: inline;
+	counter-reset: definitions;
+}
+.dictionary-style dt + dt:before {
+	content: ", ";
+	margin-left: -0.2rem;
+}
+.dictionary-style dd {
+	display: block;
+	counter-increment: definitions;
+}
+.dictionary-style dd:before {
+	content: counter(definitions, decimal) ". ";
+}
+
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.pull-quote {
+	position: relative;
+	padding: 1em;
+}
+.pull-quote:before,
+.pull-quote:after {
+	height: 1em;
+	opacity: 0.25;
+	position: absolute;
+	font-size: 72px;
+	font-size: 4rem;
+}
+.pull-quote:before {
+	content: '“';
+	top:  0;
+	left: 0;
+}
+.pull-quote:after {
+	content: '”';
+	bottom: 0;
+	right: 0;
+}
+
+
+body {width: 770px; margin: 0 auto;padding-top: 40px; background: rgb(255,255,255);
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1)));
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
+}
+img{display: block;margin: auto;margin-bottom: 10px}
+h1 {font-family: 'Roboto', sans-serif;font-weight: 400;display: inline-block; }
